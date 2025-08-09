@@ -33,7 +33,7 @@ test('confirmationpopup',async({page})=>{
 
 })
 
-test.only('promptbox',async({page})=>{
+test.('promptbox',async({page})=>{
 
      await page.goto('https://the-internet.herokuapp.com/javascript_alerts')
 

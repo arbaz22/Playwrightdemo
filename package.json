@@ -2,7 +2,12 @@
   "name": "playwrightproject",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+  "pretest": "node clean-allure.js && node clean-allure-report.js",
+  "test": "npx playwright test",
+  "allure:report": "npx allure generate --clean && npx allure open",
+  "test:allure": "npm run test && npm run allure:report"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -10,9 +15,11 @@
   "devDependencies": {
     "@playwright/test": "^1.54.1",
     "@types/node": "^24.0.14",
+    "allure-commandline": "^2.34.1",
     "allure-playwright": "^3.3.2"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.10.2",
     "dotenv": "^17.2.0"
   }
 }

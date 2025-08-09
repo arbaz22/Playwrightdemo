@@ -8,7 +8,7 @@ test.describe('testing ecommerce application',()=>{
 
     })
 
-    test('clicking on link and my account',async ({page})=>{
+    test.slow('clicking on link and my account',async ({page})=>{
          await page.goto('https://ecommerce-playground.lambdatest.io/');
          await page.getByRole('link',{name:'Special Hot',exact:true}).click()
          await page.getByRole('link',{name:'Continue',exact:true}).click()

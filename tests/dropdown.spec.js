@@ -8,7 +8,7 @@ test('dropdown functionality',async({page})=>{
 
     await page.waitForTimeout(4000)
 
-    await page.locator('#state').selectOption({vale:'Karnataka'})
+    await page.locator('#state').selectOption({value:'Karnataka'})
 
     await page.locator('#state').selectOption({index:5})
 
